@@ -11,7 +11,7 @@ function check_login() {
     }
     var request = $.ajax({
         type: 'POST',
-        url: 'http://localhost/Codeigniter-Social-Network/ajax/login',
+        url: 'YOUR BASE URL/ajax/login',
         data: data,
         dataType: 'json',
         encode: true
