@@ -11,14 +11,15 @@ $this->Functions->get_header(); ?>
                     <?= $this->session->flashdata('registered'); ?>
                 </div>
                 <?php endif; ?>
+                <p class="text-danger" id="login_error"></p>
                 <?= form_open('#'); ?>
                 <div class="form-group">
-                    <?= form_input('username', '', array('class'=>'form-control', 'placeholder'=>'Username', 'data-validation'=>'required')); ?>
+                    <?= form_input('username', '', array('class'=>'form-control', 'placeholder'=>'Username', 'data-validation'=>'required', 'id'=>'log_username_field')); ?>
                     <div class="clearfix"></div>
-                    <?= form_password('password', '', array('class'=>'form-control', 'placeholder'=>'Password', 'data-validation'=>'required')); ?>
+                    <?= form_password('password', '', array('class'=>'form-control', 'placeholder'=>'Password', 'data-validation'=>'required', 'id'=>'log_pass_field')); ?>
                     <div class="clearfix"></div>
                     <div class="divider"></div>
-                    <?= form_submit('submit', 'Login', array('class'=>'btn btn-primary pull-right')); ?>
+                    <?= form_submit('submit', 'Login', array('class'=>'btn btn-primary pull-right', 'onclick'=>'javascript: check_login(); return false;')); ?>
                 </div>
                 <?= form_close(); ?>
                 <div class="divider"></div> <a href="<?= base_url('register') ?>">Not a Member??</a> </div>
