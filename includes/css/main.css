@@ -1,0 +1,45 @@
+body {
+	background-color: #fafafa;
+}
+.login_view {
+	margin-top: 100px;
+}
+.card {
+	background-color: #fff;
+	border: 1px solid #e1e1e1;
+	padding: 10px;
+}
+.divider {
+	clear: both;
+	height: 32px;
+}
+@media screen and (max-width: 768px){
+.clearfix_if {
+clear: both;
+}
+}
+.feed_item header .name {
+font-weight: bold;
+font-size: medium;
+}
+.comments .comment span.name {
+font-weight: bold;
+}
+.feed_actions .action span.like {
+color: red;
+cursor: pointer;
+}
+.feed_actions .action .do_comment {
+position: relative;
+}
+.feed_actions .action .do_comment span.submit {
+position: absolute;
+bottom: 0px;
+right: 0px;
+color: #24cdc2;
+cursor: pointer;
+}
+.feed_actions .action .do_comment input {
+margin-top: -10px;
+padding-right: 35px;
+}
