@@ -6,6 +6,7 @@
 <!--Form Validator-->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <!-- Ajax JS -->
+
 <script src="<?= base_url('includes/js/ajax.js'); ?>"></script>
 <!--Main Js file-->
 <script src="<?= base_url('includes/js/main.js'); ?>"></script>

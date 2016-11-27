@@ -62,12 +62,20 @@ class Functions extends CI_Model
             ->update('users');
 
     }
-    public function check_login($username, $pass) {
+    public function check_login($username, $pass)
+    {
+
         $q = $this->db->where('login', $username)
-                        ->where('password', $pass)
-                        ->get('users');
-        if($q->row('id')) {
-            return TRUE;
+
+            ->where('password', $pass)
+
+            ->get('users');
+
+        if ($q->row('id')) {
+
+            return true;
+
         }
+
     }
 }
