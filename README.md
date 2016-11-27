@@ -12,14 +12,14 @@ Don't forget to remember me in your prayers & catch me on social network account
 
 [My Blog](http://rb.cheersbin.com/)
 
-[Discuss your problems with me](http://discussions.rb.cheersbin.com)]
+[Discuss your problems with me](http://discussions.rb.cheersbin.com)
 
-[Facebook](https://www.facebook.com/rabis.naqvi.official)]
+[Facebook](https://www.facebook.com/rabis.naqvi.official)
 
-[Twitter](https://www.twitter.com/chrzbn_official)]
+[Twitter](https://www.twitter.com/chrzbn_official)
 
-[Youtube](https://www.youtube.com/channel/UCdybTHOf74nGcGrjJ7ObwTw)]
+[Youtube](https://www.youtube.com/channel/UCdybTHOf74nGcGrjJ7ObwTw)
 
-[Instagram](https://www.instagram.com/cheersbin/)]
+[Instagram](https://www.instagram.com/cheersbin/)
 
 #### CHEERS !!!
