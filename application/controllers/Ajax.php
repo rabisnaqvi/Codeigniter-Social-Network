@@ -4,74 +4,71 @@ defined('BASEPATH') or exit();
 
 /**
 
-* Ajax Controller for all ajax requests
+ * Ajax Controller for all ajax requests
 
-*/
+ */
 
 class Ajax extends MEET_Controller
-
 {
 
-function __construct()
+    public function __construct()
+    {
 
-{
+        parent::__construct();
 
-parent::__construct();
+        if (empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
 
-if(empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
+            exit('Hmmm, Cheatin Huh?. You can\'t Cheat Your Daddy. Now go to hell or watch Pogo.');
 
-exit('Hmmm, Cheatin Huh?. You can\'t Cheat Your Daddy. Now go to hell or watch Pogo.');
+        }
 
-}
+    }
 
-}
+    public function login()
+    {
 
-public function login()
+        if ($this->session->userdata('user_id')) {
 
-{
+            $this->session->unset_userdata('user_id');
 
-if($this->session->userdata('user_id')) {
+        }
 
-$this->session->unset_userdata('user_id');
+        $username = $this->input->post('login');
 
-}
+        $pass = md5($this->input->post('pass'));
 
-$username = $this->input->post('login');
+        if (!$username || !$pass) {
 
-$pass = md5($this->input->post('pass'));
+            show_404();
 
-if(!$username || !$pass) {
+        }
 
-show_404();
+        if ($this->Functions->check_login($username, $pass)) {
 
-}
+            $return = array(
 
-if($this->Functions->check_login($username, $pass)) {
+                'cb_csrf_secured' => $this->security->get_csrf_hash(),
 
-$return = array(
+            );
 
-'cb_csrf_secured'=>$this->security->get_csrf_hash()
+            $id = $this->Functions->get_user_id_from_username($username);
 
-);
+            $this->session->set_userdata('user_id', $id);
 
-$id = $this->Functions->get_user_id_from_username($username);
+        } else {
 
-$this->session->set_userdata('user_id', $id);
+            $return = array(
 
-} else {
+                'cb_csrf_secured' => $this->security->get_csrf_hash(),
 
-$return = array(
+                'error'           => 'Invalid Username/Password',
 
-'cb_csrf_secured'=>$this->security->get_csrf_hash(),
+            );
 
-'error'=>'Invalid Username/Password'
+        }
 
-);
+        echo json_encode($return);
 
-}
-
-echo json_encode($return);
-
-}
+    }
 
 }
