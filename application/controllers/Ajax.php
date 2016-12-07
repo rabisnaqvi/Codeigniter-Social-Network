@@ -70,5 +70,22 @@ class Ajax extends MEET_Controller
         echo json_encode($return);
 
     }
+    public function new_post()
+    {
+        header('Content-Type: application/json');
+        $post_text = $this->input->post('content');
+        $poster    = $this->session->userdata('user_id');
+        $date      = date('Y-m-d H:i:s');
+        if ($this->Functions->new_post(nl2br($post_text), $poster, $date)) {
+            $return = array(
+                'cb_csrf_secured' => $this->security->get_csrf_hash());
+            echo json_encode($return);
+        } else {
+            $return = array(
+                'error'    => 'Something Went Wrong',
+                'csrfHash' => $this->security->get_csrf_hash());
+            echo json_encode($return);
+        }
+    }
 
 }

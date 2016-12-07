@@ -19,12 +19,16 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <img src="<?= base_url("includes/img/icons/create.png") ?>" alt="Create Post" class="img-responsive pull-right" width="40px">
+                    <img src="<?= base_url("includes/img/icons/create.png") ?>" alt="Create Post" class="img-responsive pull-right" width="40px" onclick="javascript: create_post();" style="cursor: pointer;">
                     <h4 class="modal-title">Create new post</h4>
                 </div>
                 <div class="modal-body">
-                    <?= form_open('#'); ?>
-                    <textarea name="content" id="post_content" cols="30" rows="3" placeholder="What's Up?" class="form-control" style="resize: none;"></textarea>
+                    <?= form_open('#', array('id'=>'new_post_form')); ?>
+                    <p class="text-danger" id="new_post_errors"></p>
+                    <p class="text-success" id="new_post_done"></p>
+                    <div class="form-group" id="new_post_content">
+                        <textarea name="content" id="post_content" cols="30" rows="3" placeholder="What's Up?" class="form-control" style="resize: none;"></textarea>
+                    </div>
                     <div class="divider"></div>
                     <div class="clearfix"></div>
                     <div class="col-xs-3">
