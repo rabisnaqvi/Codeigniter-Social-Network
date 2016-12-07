@@ -78,10 +78,16 @@ class Functions extends CI_Model
         }
 
     }
-    public function new_post($content, $poster, $date) {
+    public function new_post($content, $poster, $date)
+    {
+
         return $this->db->set('content', $content)
-                        ->set('poster_id', $poster)
-                        ->set('date', $date)
-                        ->insert('posts');
+
+            ->set('poster_id', $poster)
+
+            ->set('date', $date)
+
+            ->insert('posts');
+
     }
 }
