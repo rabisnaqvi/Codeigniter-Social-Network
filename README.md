@@ -9,18 +9,5 @@ After cloning & downloading the repository you have to set the project up accord
 1. Change Base Url in /application/config/config.php
 2. Change your database credentials in /application/config/database.php
 ```
-Don't forget to remember me in your prayers & catch me on social network accounts.
-
-[My Blog](http://rb.cheersbin.com/)
-
-[Discuss your problems with me](http://discussions.rb.cheersbin.com)
-
-[Facebook](https://www.facebook.com/rabis.naqvi.official)
-
-[Twitter](https://www.twitter.com/chrzbn_official)
-
-[Youtube](https://www.youtube.com/channel/UCdybTHOf74nGcGrjJ7ObwTw)
-
-[Instagram](https://www.instagram.com/cheersbin/)
 
 #### CHEERS !!!
